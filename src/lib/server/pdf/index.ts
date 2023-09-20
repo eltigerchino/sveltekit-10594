@@ -4,14 +4,14 @@ import type { TDocumentDefinitions, TFontDictionary } from 'pdfmake/interfaces';
 import futuraNormal from '$lib/fonts/FuturaPTBook.otf';
 import futuraBold from '$lib/fonts/FuturaPTCondBold.otf';
 import path from 'path';
-import { building } from '$app/environment';
+import { dev } from '$app/environment';
 // import { fileURLToPath } from 'url';
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
 let dir = process.cwd();
-if (building) {
+if (!dev) {
 	dir += '/.netlify/server';
 }
 
