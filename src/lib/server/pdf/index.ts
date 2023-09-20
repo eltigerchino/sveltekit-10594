@@ -4,15 +4,15 @@ import type { TDocumentDefinitions, TFontDictionary } from 'pdfmake/interfaces';
 import futuraNormal from '$lib/fonts/FuturaPTBook.otf';
 import futuraBold from '$lib/fonts/FuturaPTCondBold.otf';
 import path from 'path';
-import { fileURLToPath } from 'url';
+// import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 const fonts: TFontDictionary = {
 	Futura: {
-		normal: path.join(__dirname, futuraNormal),
-		bold: path.join(__dirname, futuraBold)
+		normal: path.join(process.cwd(), futuraNormal),
+		bold: path.join(process.cwd(), futuraBold)
 	}
 };
 
