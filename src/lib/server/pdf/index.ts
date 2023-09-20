@@ -3,11 +3,12 @@ import blobStream, { type IBlobStream } from 'blob-stream';
 import type { TDocumentDefinitions, TFontDictionary } from 'pdfmake/interfaces';
 import futuraNormal from '$lib/fonts/FuturaPTBook.otf';
 import futuraBold from '$lib/fonts/FuturaPTCondBold.otf';
+import path from 'path';
 
 const fonts: TFontDictionary = {
 	Futura: {
-		normal: futuraNormal,
-		bold: futuraBold
+		normal: path.join(process.cwd(), futuraNormal),
+		bold: path.join(process.cwd(), futuraBold)
 	}
 };
 
