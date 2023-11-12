@@ -10,10 +10,7 @@ import { dev } from '$app/environment';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
-let dir = process.cwd();
-if (!dev) {
-	dir += '/.netlify/server';
-}
+const dir = dev ? process.cwd() : path.join(process.cwd(), '/.netlify/server');
 
 const fonts: TFontDictionary = {
 	Futura: {

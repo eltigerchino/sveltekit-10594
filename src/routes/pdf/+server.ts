@@ -1,10 +1,8 @@
 
-import { error } from '@sveltejs/kit';
 import genInvoicePdf from '$lib/server/pdf';
 import type { RequestHandler } from './$types';
 
 export const GET = (async ({ setHeaders }) => {
-
 
 	const pdf = await genInvoicePdf();
 
